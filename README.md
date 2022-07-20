@@ -1,9 +1,14 @@
 ![Yamdb Workflow Status](https://github.com/shakdv/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master&event=push)
-# Проект: запуск docker-compose для «API для YaMDb»
+# Проект: CI и CD для «API для YaMDb»
 
-Реализация docker-compose для приложения «API для YaMDb»,
+Реализация docker-compose и CI/CD для приложения «API для YaMDb»,
 о котором более подробно расписано тут: [«API для YaMDb»](https://github.com/shakdv/api_yamdb) 
 
+## Реализовано в CI/CD
+* автоматический запуск тестов
+* обновление образов на Docker Hub
+* автоматический деплой на боевой сервер при пуше в главную ветку (master или main)
+* отправка сообщения в Telegram через бота об успешном деплое
 
 ## Технологии
 * Python 3.7
@@ -14,17 +19,18 @@
 * Docker-Compose
 * Nginx
 * PostreSQL
+* GitHub Actions
 
 ## Установка и запуск
 
 Клонировать репозиторий:
 ```bash
-git clone https://github.com/shakdv/infra_sp2.git
+git clone https://github.com/shakdv/yamdb_final.git
 ```
 
 Перейти в каталог:
 ```bash
-cd infra_sp2/infra
+cd yamdb_final/infra
 ```
 
 Добавить файл .env в котором хранится SECRET_KEY и настройки БД:
